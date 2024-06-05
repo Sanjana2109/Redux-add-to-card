@@ -6,7 +6,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 export default function Header() {
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -39,11 +39,12 @@ export default function Header() {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <div className="card_details">
-                    <i className="fas fa-close"></i>
-                    <p>
-                    your cart is empty
+                <div className="card_details d-flex justify-content-center align-items-center" style={{ width: "24rem", padding: "10px", position: "relative" }}>
+                    <i className="fas fa-close smallclose" style={{ position: "absolute", top: "2px", right: "20px", fontSize: "23px", cursor: "pointer" }} onClick={() => setAnchorEl(null)}></i>
+                    <p style={{ fontSize: "22px" }}>
+                        your cart is empty
                     </p>
+                    <img src="./cart.gif" alt="" className="emptycart_img" style={{ width: "5rem", padding: "10px" }} />
                 </div>
             </Menu>
         </Navbar>
