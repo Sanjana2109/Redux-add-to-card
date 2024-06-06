@@ -20,7 +20,7 @@ export default function Header() {
             <Container>
                 <NavLink to="/" className="text-decoration-none text-light mx-3">Add to cart</NavLink>
                 <Nav className="me-auto">
-                    <NavLink to="/" className="text-decoration-none text-light">Home</NavLink>
+                    <NavLink to="/cart" className="text-decoration-none text-light">Home</NavLink>
                 </Nav>
                 <Badge badgeContent={4} color="primary" style={{ fontSize: "24px", cursor: "pointer" }} id="basic-button"
                     aria-controls={open ? 'basic-menu' : undefined}
