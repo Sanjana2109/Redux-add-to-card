@@ -1,11 +1,10 @@
-import { addToCartReducer, removeFromCartReducer } from "./reducer";
+import { reducer } from "./reducer";
 import { combineReducers, legacy_createStore } from "redux";
 import { thunk } from "redux-thunk";
 import { applyMiddleware } from "redux";
 
 const rootReducer = combineReducers({
-    add:addToCartReducer,
-    remove:removeFromCartReducer
+    add:reducer
 })
 
 
